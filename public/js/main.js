@@ -11,6 +11,13 @@
     //debugger;
     nickName = this.value;
   }
+
+  function roomMessage(msg){
+    //debugger;
+    let newMsg = `<li>${msg.message}</li>`;
+    messageList.innerHTML += newMsg;
+  }
+
   function handleSendMessage(e) {
     e.preventDefault();//prevent the default behaviour of the page
     //debugger;
@@ -38,6 +45,7 @@
 
 nameInput.addEventListener('change', setNickname, false);
 chatForm.addEventListener('submit', handleSendMessage, false);
+socket.addEventListener('rooms message', roomMessage, false);
 socket.addEventListener('chat message', appendMessage, false);
 socket.addEventListener('disconnect message', appendDMessage, false); //has to match what is on the app js emit
 })();
