@@ -1,25 +1,84 @@
 /* reset */
 * {
-	margin: 0; padding: 0; box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	margin-top: 20px;
 }
 
-body { font: 13px Helvetica, Arial; }
+body {
+	font: 13px Helvetica, Arial;
+	background: -moz-linear-gradient(-45deg, #06d6d6 0, #06d6d6 25%, #0284af 50%,#016f93 75%,#016f93 100%);
+	background: -webkit-linear-gradient(-45deg, #06d6d6 0, #06d6d6 25%, #0284af 50%,#016f93 75%,#016f93 100%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
 
 form {
-	background: #000;
 	padding: 3px;
 	position: fixed;
 	bottom: 0;
 	width: 100%;
 
-	input { border: 0; padding: 10px; width: 90%; margin-right: 0.5%; }
+	input {
+		border: 0;
+		padding: 10px;
+		width: 80%;
+		margin-right: 0.5%;
+	}
 
-	button { width: 9%; background: rgb(75, 150 ,255); border: none; padding: 10px; }
+	button {
+		width: 15%;
+		background: rgb(0, 46 ,77);
+		border: none;
+		padding: 10px;
+		text-align: center;
+		color: white;
+		font-size: 15px;
+	}
+}
+
+.chatBox {
+	height: auto;
+}
+
+.nickname {
+	position: relative;
+	font-size: 20px;
+	margin: 0 auto;
+	display: block;
+	background: none;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: solid 2px white;
+	color: white;
+
+	&::placeholder {
+		color: white;
+	}
 }
 
 #messages {
-	list-style-type: none; margin: 0; padding: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 10px;
 
-	li { padding: 5px 10px;	}
-	li:nth-child(odd) { background: #eee; }
+	li {
+		padding: 15px 10px;
+		width: 50%;
+		color: white;
+		border-radius: 10px;
+		background: #3385ff;
+	}
+
+	li:nth-child(odd) {
+		background: #ccebff;
+		opacity: 0.5;
+		color: #000099;
+		border-radius: 10px;
+		margin-left: 30px;
+
+	}
 }
